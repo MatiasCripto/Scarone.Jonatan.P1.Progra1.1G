@@ -47,6 +47,7 @@ int aplicarAumento(float precio)
 char reemplazarCaracteres(char cadena[], char pCaracter, char sCaracter, int tam)
 {
     int todoOk = 0;
+    int contador = 0;
 
     if(cadena != NULL)
     {
@@ -55,10 +56,14 @@ char reemplazarCaracteres(char cadena[], char pCaracter, char sCaracter, int tam
             if(cadena[i] == pCaracter)
             {
                 cadena[i] = sCaracter;
+                contador++;
             }
         }
         todoOk = 1;
         printf("%s\n", cadena);
+        printf("%d\n", contador);
+        
+       
     }
     return todoOk;
 }
